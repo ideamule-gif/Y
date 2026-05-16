@@ -551,6 +551,15 @@
             .steps-grid, .features-grid, .pricing-grid { gap: 20px; }
             .step-card, .feature-card { padding: 28px 20px; }
         }
+
+        /* Фикс: показываем бейдж "Выгодно" полностью */
+.price-card.popular {
+    overflow: visible !important;
+}
+.price-card.popular .popular-badge {
+    top: -12px;
+    white-space: nowrap;
+}
     </style>
 </head>
 <body>
