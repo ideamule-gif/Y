@@ -4,13 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- 🔍 SEO: Единый title (VPN + прокси) -->
+    <!-- 🔍 SEO: Единый title + keywords (VPN + прокси) -->
     <title>Бесплатный прокси для Telegram и надёжный ВПН | YUG VPN</title>
-    
-    <meta name="description" content="YUG VPN: бесплатный прокси для Telegram и быстрый платный ВПН. Получи ключ доступа в боте за 1 минуту. Шифрование, анонимность, безлимитный трафик.">
-    
-    <meta name="keywords" content="VPN, бесплатный прокси, прокси для телеграм, YUG VPN, MTProto proxy, безопасный интернет, анонимность, обход блокировок, VPN бот, Happ proxy">
-    
+    <meta name="description" content="YUG VPN: бесплатный прокси для Telegram и быстрый платный ВПН. Получи ключ в боте за 1 минуту. Шифрование, анонимность, безлимитный трафик.">
+    <meta name="keywords" content="VPN, бесплатный прокси, прокси для телеграм, YUG VPN, MTProto proxy, безопасный интернет, анонимность, VPN бот, Happ proxy">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://yugvpn.store">
     
@@ -202,6 +199,28 @@
             50% { transform: scale(1.15); opacity: 0; }
         }
 
+        /* --- Proxy Button (secondary) --- */
+        .proxy-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 28px;
+            background: rgba(0, 136, 204, 0.15);
+            color: #38bdf8;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border: 2px solid rgba(0, 136, 204, 0.4);
+            transition: all 0.3s;
+            margin-top: 20px;
+            text-decoration: none;
+        }
+        .proxy-btn:hover {
+            background: rgba(0, 136, 204, 0.25);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0,136,204,0.3);
+        }
+
         /* ===== SECTION COMMON ===== */
         section { padding: 100px 24px; }
         .section-title {
@@ -237,26 +256,26 @@
             border-radius: 20px;
             padding: 40px 32px;
             text-align: center;
-            transition: transform 0.3s, border-color 0.3s;
+            transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
         }
         .step-card::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, transparent, #0088cc, transparent);
+            inset: 0;
+            background: radial-gradient(circle at center, rgba(0, 136, 204, 0.3) 0%, transparent 70%);
             opacity: 0;
-            transition: opacity 0.3s;
-        }
-        .step-card:hover {
-            transform: translateY(-8px);
-            border-color: rgba(0,136,204,0.3);
+            transition: opacity 0.4s ease;
+            z-index: 0;
         }
         .step-card:hover::before { opacity: 1; }
+        .step-card:hover {
+            transform: translateY(-8px);
+            border-color: transparent;
+            box-shadow: 0 20px 60px rgba(0, 136, 204, 0.4);
+        }
+        .step-card > * { position: relative; z-index: 1; }
         .step-number {
             width: 52px;
             height: 52px;
@@ -295,12 +314,26 @@
             border-radius: 20px;
             padding: 36px 28px;
             text-align: center;
-            transition: transform 0.3s, border-color 0.3s;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
         }
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at center, rgba(0, 136, 204, 0.3) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 0;
+        }
+        .feature-card:hover::before { opacity: 1; }
         .feature-card:hover {
             transform: translateY(-6px);
-            border-color: rgba(0,136,204,0.3);
+            border-color: transparent;
+            box-shadow: 0 15px 50px rgba(0, 136, 204, 0.35);
         }
+        .feature-card > * { position: relative; z-index: 1; }
         .feature-icon {
             font-size: 2.6rem;
             margin-bottom: 16px;
@@ -331,9 +364,20 @@
             border-radius: 24px;
             padding: 44px 32px;
             text-align: center;
-            transition: transform 0.3s, border-color 0.3s;
+            transition: all 0.4s ease;
             position: relative;
+            overflow: hidden;
         }
+        .price-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at center, rgba(0, 136, 204, 0.25) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 0;
+        }
+        .price-card:hover::before { opacity: 1; }
         .price-card.popular {
             border-color: rgba(0,136,204,0.5);
             background: rgba(0,136,204,0.06);
@@ -350,7 +394,12 @@
             font-size: 0.8rem;
             font-weight: 700;
         }
-        .price-card:hover { transform: translateY(-8px); }
+        .price-card:hover {
+            transform: translateY(-8px);
+            border-color: transparent;
+            box-shadow: 0 20px 60px rgba(0, 136, 204, 0.4);
+        }
+        .price-card > * { position: relative; z-index: 1; }
         .price-card h3 {
             font-size: 1.3rem;
             font-weight: 700;
@@ -432,13 +481,29 @@
             border-radius: 16px;
             padding: 28px 16px;
             text-align: center;
-            transition: transform 0.3s, border-color 0.3s;
-            cursor: pointer;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            display: block;
         }
+        .app-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at center, rgba(0, 136, 204, 0.25) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 0;
+        }
+        .app-card:hover::before { opacity: 1; }
         .app-card:hover {
             transform: translateY(-4px);
-            border-color: rgba(0,136,204,0.3);
+            border-color: transparent;
+            box-shadow: 0 15px 40px rgba(0, 136, 204, 0.35);
         }
+        .app-card > * { position: relative; z-index: 1; }
         .app-card .app-icon { font-size: 2.4rem; margin-bottom: 10px; }
         .app-card .app-name { font-weight: 600; color: #fff; font-size: 0.95rem; }
         .app-card .app-desc { color: #6b7280; font-size: 0.8rem; margin-top: 4px; }
@@ -488,3 +553,190 @@
         }
     </style>
 </head>
+<body>
+
+<div class="bg-glow"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="nav-logo">⚡ YUG VPN</div>
+    <a href="https://t.me/yugvpnbot" target="_blank" class="nav-btn">Открыть бот</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-badge">🔒 Надёжный VPN за 30 секунд</div>
+    <h1>Свободный интернет<br><span>в один клик</span></h1>
+    <p>Подключайтесь к безопасному и быстрому VPN через Telegram-бот. Без регистрации, без лишних настроек.</p>
+
+    <div class="tg-cta-wrapper">
+        <a href="https://t.me/yugvpnbot" target="_blank">
+            <div class="tg-icon-circle">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161l-1.97 9.279c-.145.658-.537.818-1.084.508l-3-2.211-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.054 5.56-5.022c.242-.213-.054-.333-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.128.833.944z"/>
+                </svg>
+            </div>
+        </a>
+        <div class="tg-cta-text">Перейти в Telegram-бот</div>
+        <div class="tg-cta-sub">Получите ключ доступа и подключитесь мгновенно</div>
+    </div>
+    
+    <!-- Бесплатный прокси кнопка -->
+    <a href="tg://proxy?server=go.yugvpn.ru&port=8443&secret=dd7d4a1b9866728d3a66b800a01d197b" class="proxy-btn">
+        <span>⚡</span>
+        Бесплатный прокси для Telegram
+    </a>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+    <h2 class="section-title reveal">Как это <span>работает?</span></h2>
+    <p class="section-sub reveal">Три простых шага — и вы в безопасности</p>
+    <div class="steps-grid">
+        <div class="step-card reveal">
+            <div class="step-number">1</div>
+            <h3>Получите ключ</h3>
+            <p>Откройте нашего Telegram-бота, получите персональный ключ доступа и скопируйте его.</p>
+        </div>
+        <div class="step-card reveal">
+            <div class="step-number">2</div>
+            <h3>Установите приложение</h3>
+            <p>Скачайте официальный клиент для вашего устройства прямо с нашего сайта.</p>
+        </div>
+        <div class="step-card reveal">
+            <div class="step-number">3</div>
+            <h3>Подключитесь в один клик</h3>
+            <p>Откройте приложение, нажмите «Добавить сервер». Данные из буфера вставятся автоматически.</p>
+        </div>
+    </div>
+</section>
+
+<!-- APPS DOWNLOAD -->
+<section id="apps">
+    <h2 class="section-title reveal">Приложения для <span>подключения</span></h2>
+    <p class="section-sub reveal">Скачайте Happ — современный клиент для вашего устройства</p>
+    <div class="apps-grid">
+        <a href="https://apps.apple.com/us/app/happ-proxy-utility/id6504287215" target="_blank" class="app-card reveal">
+            <div class="app-icon">🍎</div>
+            <div class="app-name">iOS / iPhone</div>
+            <div class="app-desc">App Store</div>
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.happproxy" target="_blank" class="app-card reveal">
+            <div class="app-icon">🤖</div>
+            <div class="app-name">Android</div>
+            <div class="app-desc">Google Play</div>
+        </a>
+        <a href="https://github.com/Happ-proxy/happ-desktop/releases/latest/download/setup-Happ.x64.exe" target="_blank" class="app-card reveal">
+            <div class="app-icon">🪟</div>
+            <div class="app-name">Windows</div>
+            <div class="app-desc">.exe установщик</div>
+        </a>
+        <a href="https://apps.apple.com/us/app/happ-proxy-utility/id6504287215" target="_blank" class="app-card reveal">
+            <div class="app-icon">🍏</div>
+            <div class="app-name">macOS</div>
+            <div class="app-desc">App Store</div>
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.happproxy" target="_blank" class="app-card reveal">
+            <div class="app-icon">🐧</div>
+            <div class="app-name">Android TV</div>
+            <div class="app-desc">Google Play</div>
+        </a>
+        <a href="https://apps.apple.com/us/app/happ-proxy-utility-for-tv/id6748297274" target="_blank" class="app-card reveal">
+            <div class="app-icon">📺</div>
+            <div class="app-name">Apple TV</div>
+            <div class="app-desc">App Store</div>
+        </a>
+    </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features">
+    <h2 class="section-title reveal">Почему <span>мы?</span></h2>
+    <p class="section-sub reveal">Всё, что нужно для безопасного и быстрого интернета</p>
+    <div class="features-grid">
+        <div class="feature-card reveal">
+            <span class="feature-icon">⚡</span>
+            <h3>Максимальная скорость</h3>
+            <p>Современные протоколы обеспечивают молниеносное соединение без задержек.</p>
+        </div>
+        <div class="feature-card reveal">
+            <span class="feature-icon">🛡️</span>
+            <h3>Полная анонимность</h3>
+            <p>Мы не храним логи и надёжно шифруем ваш трафик.</p>
+        </div>
+        <div class="feature-card reveal">
+            <span class="feature-icon">🌍</span>
+            <h3>Обход любых преград</h3>
+            <p>Доступ к любимым сервисам и контенту из любой точки мира в один клик.</p>
+        </div>
+        <div class="feature-card reveal">
+            <span class="feature-icon">👆</span>
+            <h3>Подключение в 1 клик</h3>
+            <p>Никаких сложных настроек — просто нажмите кнопку и вы в безопасности.</p>
+        </div>
+    </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+    <h2 class="section-title reveal">Тарифы</h2>
+    <p class="section-sub reveal">Прозрачные цены без скрытых платежей</p>
+    <div class="pricing-grid">
+        <div class="price-card reveal">
+            <h3>1 месяц</h3>
+            <div class="price-amount">199 <small>₽</small></div>
+            <div class="price-period">за 30 дней</div>
+            <ul>
+                <li>Безлимитный трафик</li>
+                <li>Все устройства</li>
+                <li>Высокая скорость</li>
+                <li>Поддержка 24/7</li>
+            </ul>
+            <a href="https://t.me/yugvpnbot" target="_blank">
+                <button class="price-btn">Выбрать</button>
+            </a>
+        </div>
+        <div class="price-card popular reveal">
+            <div class="popular-badge">🔥 Выгодно</div>
+            <h3>3 месяца</h3>
+            <div class="price-amount">499 <small>₽</small></div>
+            <div class="price-period">за 90 дней · <s style="color:#6b7280">597 ₽</s></div>
+            <ul>
+                <li>Безлимитный трафик</li>
+                <li>Все устройства</li>
+                <li>Высокая скорость</li>
+                <li>Поддержка 24/7</li>
+                <li>Экономия 98 ₽</li>
+            </ul>
+            <a href="https://t.me/yugvpnbot" target="_blank">
+                <button class="price-btn">Выбрать</button>
+            </a>
+        </div>
+    </div>
+    <p class="payment-note reveal">💳 Оплата любым удобным способом: карты, СБП, криптовалюта и другие</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2025 YUG VPN. Все права защищены. | <a href="https://t.me/yugvpnbot" target="_blank">Telegram-бот</a> | <a href="https://t.me/yugvpn" target="_blank">Канал</a></p>
+</footer>
+
+<!-- SCROLL REVEAL SCRIPT -->
+<script>
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add('visible');
+                }, index * 80);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15 });
+
+    reveals.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
