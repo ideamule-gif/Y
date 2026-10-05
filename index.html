@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- 🔍 SEO: Единый title + keywords (VPN + прокси) -->
-   <title>Бесплатный прокси для Telegram и WhatsApp | YUG VPN</title>
-   <meta name="description" content="YUG VPN: бесплатный прокси для Telegram и WhatsApp. Настройка за 1 минуту в боте или по инструкции. Шифрование, анонимность, безлимитный трафик.">
-   <meta name="keywords" content="VPN, бесплатный прокси, прокси для телеграм, прокси для WhatsApp, прокси Ватсап, YUG VPN, MTProto proxy, настройка прокси WhatsApp, безопасный интернет, VPN бот, Happ proxy">
+    <!-- 🔍 SEO -->
+   <title>YUG VPN — Быстрый и безопасный VPN | Настройка за 1 минуту</title>
+   <meta name="description" content="YUG VPN: безопасный и быстрый VPN для всех устройств. Настройка за 1 минуту в Telegram-боте. Шифрование, анонимность, безлимитный трафик.">
+   <meta name="keywords" content="VPN, YUG VPN, безопасный интернет, VPN бот, Happ, быстрый VPN, анонимность, шифрование, VPN для телефона, VPN для ПК">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://yugvpn.ru">
     
     <!-- 🌐 Open Graph для соцсетей -->
-    <meta property="og:title" content="YUG VPN — Бесплатный прокси и быстрый ВПН">
-    <meta property="og:description" content="Подключи бесплатный прокси для Телеграм или купи премиум ВПН. Настройка за 1 минуту в боте.">
+    <meta property="og:title" content="YUG VPN — Быстрый и безопасный VPN">
+    <meta property="og:description" content="Подключи быстрый VPN за 1 минуту в Telegram-боте. Безопасно, анонимно, без ограничений.">
     <meta property="og:image" content="https://yugvpn.ru/og-image.jpg">
     <meta property="og:url" content="https://yugvpn.ru">
     <meta property="og:type" content="website">
@@ -28,31 +28,9 @@
       "name": "YUG VPN",
       "applicationCategory": "SecurityApplication",
       "operatingSystem": "All",
-      "description": "Сервис для безопасного доступа: бесплатный прокси для Telegram и WhatsApp, платный высокоскоростной ВПН",
+      "description": "Сервис для безопасного доступа: высокоскоростной VPN для всех устройств",
       "url": "https://yugvpn.store",
-      "sameAs": ["https://t.me/yugvpnbot", "https://t.me/yugvpn"]
-    },
-    {
-      "@type": "HowTo",
-      "name": "Как настроить бесплатный прокси для WhatsApp",
-      "description": "Пошаговая инструкция по подключению бесплатного прокси для WhatsApp без использования VPN.",
-      "step": [
-        {
-          "@type": "HowToStep",
-          "name": "Откройте настройки WhatsApp",
-          "text": "Откройте WhatsApp → Настройки → Данные и хранилище → Прокси"
-        },
-        {
-          "@type": "HowToStep",
-          "name": "Введите данные прокси",
-          "text": "Адрес: go.yugvpn.ru, Порт чата: 8444, Порт медиа: 7778"
-        },
-        {
-          "@type": "HowToStep",
-          "name": "Сохраните настройки",
-          "text": "Нажмите Сохранить. Статус должен измениться на Подключено."
-        }
-      ]
+      "sameAs": ["https://t.me/yugvpnbot"]
     }
   ]
 }
@@ -226,28 +204,6 @@
         @keyframes ringPulse {
             0%, 100% { transform: scale(1); opacity: 0.5; }
             50% { transform: scale(1.15); opacity: 0; }
-        }
-
-        /* --- Proxy Button (secondary) --- */
-        .proxy-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 12px 28px;
-            background: rgba(0, 136, 204, 0.15);
-            color: #38bdf8;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 0.95rem;
-            border: 2px solid rgba(0, 136, 204, 0.4);
-            transition: all 0.3s;
-            margin-top: 20px;
-            text-decoration: none;
-        }
-        .proxy-btn:hover {
-            background: rgba(0, 136, 204, 0.25);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0,136,204,0.3);
         }
 
         /* ===== SECTION COMMON ===== */
@@ -589,229 +545,6 @@
     top: -12px;
     white-space: nowrap;
 }
-
-/* Контейнер кнопок прокси */
-.proxy-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    justify-content: center;
-    margin-top: 24px;
-}
-
-/* Базовые стили кнопок */
-.proxy-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 12px 28px;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 0.95rem;
-    border: 2px solid;
-    transition: all 0.3s;
-    text-decoration: none;
-    cursor: pointer;
-    font-family: inherit;
-}
-
-/* Telegram кнопка */
-.tg-btn {
-    background: rgba(0, 136, 204, 0.15);
-    color: #38bdf8;
-    border-color: rgba(0, 136, 204, 0.4);
-}
-.tg-btn:hover {
-    background: rgba(0, 136, 204, 0.25);
-    transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(0,136,204,0.3);
-}
-
-/* WhatsApp кнопка */
-.wa-btn {
-    background: rgba(37, 211, 102, 0.15);
-    color: #25D366;
-    border-color: rgba(37, 211, 102, 0.4);
-}
-.wa-btn:hover {
-    background: rgba(37, 211, 102, 0.25);
-    transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
-}
-
-/* Модальное окно */
-.modal-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(8px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    z-index: 9999;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-}
-.modal-overlay.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-.modal-content {
-    background: #111827;
-    border: 1px solid rgba(37, 211, 102, 0.3);
-    border-radius: 20px;
-    padding: 32px;
-    max-width: 520px;
-    width: 100%;
-    max-height: 85vh;
-    overflow-y: auto;
-    position: relative;
-    transform: scale(0.9) translateY(20px);
-    transition: transform 0.3s ease;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-}
-.modal-overlay.active .modal-content {
-    transform: scale(1) translateY(0);
-}
-
-.modal-close {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    width: 32px;
-    height: 32px;
-    background: rgba(255,255,255,0.1);
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    font-size: 1.2rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.3s;
-}
-.modal-close:hover { background: rgba(255,255,255,0.2); }
-
-.modal-title {
-    font-size: 1.4rem;
-    font-weight: 700;
-    margin-bottom: 8px;
-    color: #fff;
-    padding-right: 40px;
-}
-.modal-subtitle {
-    color: #9ca3af;
-    font-size: 0.95rem;
-    margin-bottom: 24px;
-}
-
-.modal-steps { margin-bottom: 24px; }
-.modal-step {
-    display: flex;
-    gap: 12px;
-    align-items: flex-start;
-    margin-bottom: 16px;
-    color: #e0e0e0;
-}
-.modal-step-num {
-    width: 28px;
-    height: 28px;
-    background: rgba(37, 211, 102, 0.2);
-    color: #25D366;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 0.9rem;
-    flex-shrink: 0;
-}
-.modal-step p { margin: 0; line-height: 1.5; }
-.modal-step strong { color: #fff; }
-
-.modal-ports {
-    background: rgba(0,0,0,0.3);
-    border: 1px solid rgba(37, 211, 102, 0.3);
-    border-radius: 12px;
-    padding: 16px;
-    margin: 16px 0;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-.port-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-.port-label { color: #9ca3af; font-size: 0.9rem; }
-.port-value {
-    background: rgba(37, 211, 102, 0.1);
-    color: #25D366;
-    padding: 4px 10px;
-    border-radius: 6px;
-    font-family: monospace;
-    font-size: 0.95rem;
-    font-weight: 600;
-}
-.status-connected {
-    color: #25D366;
-    font-weight: 600;
-    background: rgba(37, 211, 102, 0.1);
-    padding: 2px 6px;
-    border-radius: 4px;
-}
-
-.modal-tips {
-    background: rgba(37, 211, 102, 0.05);
-    border-left: 3px solid rgba(37, 211, 102, 0.4);
-    border-radius: 8px;
-    padding: 16px;
-    margin-bottom: 24px;
-}
-.modal-tips h4 { margin: 0 0 8px; color: #fff; font-size: 1rem; }
-.modal-tips p { margin: 0 0 8px; color: #9ca3af; font-size: 0.9rem; }
-.modal-tips ul { list-style: none; padding: 0; margin: 0; }
-.modal-tips ul li { color: #9ca3af; font-size: 0.9rem; padding: 4px 0; }
-.modal-tips ul li code {
-    background: rgba(37, 211, 102, 0.1);
-    color: #25D366;
-    padding: 2px 6px;
-    border-radius: 4px;
-    font-family: monospace;
-}
-
-.modal-done-btn {
-    width: 100%;
-    padding: 14px;
-    background: linear-gradient(135deg, #25D366, #128C7E);
-    color: #fff;
-    border: none;
-    border-radius: 12px;
-    font-size: 1rem;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all 0.3s;
-    font-family: inherit;
-}
-.modal-done-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
-}
-
-/* Адаптив модалки */
-@media (max-width: 600px) {
-    .modal-content { padding: 24px 20px; }
-    .modal-title { font-size: 1.2rem; }
-    .proxy-buttons { flex-direction: column; align-items: center; }
-    .proxy-btn { width: 100%; max-width: 320px; justify-content: center; }
-}
         
     </style>
 </head>
@@ -843,18 +576,6 @@
         </a>
         <div class="tg-cta-text">Перейти в Telegram-бот</div>
         <div class="tg-cta-sub">Получите ключ доступа и подключитесь мгновенно</div>
-    </div>
-    
-     <!-- Кнопки прокси -->
-    <div class="proxy-buttons">
-        <a href="tg://proxy?server=go.yugvpn.ru&port=8443&secret=dd7d4a1b9866728d3a66b800a01d197b" class="proxy-btn tg-btn">
-            <span></span>
-            Бесплатный прокси для Telegram
-        </a>
-        <button class="proxy-btn wa-btn" id="wa-proxy-btn">
-            <span></span>
-            Бесплатный прокси для WhatsApp
-        </button>
     </div>
 </section>
 
@@ -988,7 +709,7 @@
 
 <!-- FOOTER -->
 <footer>
-    <p>© 2025 YUG VPN. Все права защищены. | <a href="https://t.me/yugvpnbot" target="_blank">Telegram-бот</a> | <a href="https://t.me/yugvpn" target="_blank">Канал</a></p>
+    <p>© 2025 YUG VPN. Все права защищены. | <a href="https://t.me/yugvpnbot" target="_blank">Telegram-бот</a></p>
 </footer>
 
 <!-- SCROLL REVEAL SCRIPT -->
@@ -1008,88 +729,5 @@
     reveals.forEach(el => observer.observe(el));
 </script>
 
-   <!-- Модальное окно WhatsApp -->
-<div class="modal-overlay" id="wa-modal">
-    <div class="modal-content">
-        <button class="modal-close" id="wa-modal-close">&times;</button>
-        <h2 class="modal-title">🟢 Настройка прокси для WhatsApp</h2>
-        <p class="modal-subtitle">Инструкция занимает 2 минуты. Работает без VPN.</p>
-        
-        <div class="modal-steps">
-            <div class="modal-step">
-                <span class="modal-step-num">1</span>
-                <p>Открой WhatsApp → <strong>Настройки</strong> → <strong>Данные и хранилище</strong> → <strong>Прокси</strong></p>
-            </div>
-            <div class="modal-step">
-                <span class="modal-step-num">2</span>
-                <p>Введи данные прокси:</p>
-            </div>
-            <div class="modal-ports">
-                <div class="port-row">
-                    <span class="port-label">Адрес:</span>
-                    <code class="port-value">go.yugvpn.ru</code>
-                </div>
-                <div class="port-row">
-                    <span class="port-label">Порт чата:</span>
-                    <code class="port-value">8444</code>
-                </div>
-                <div class="port-row">
-                    <span class="port-label">Порт медиа:</span>
-                    <code class="port-value">7778</code>
-                </div>
-            </div>
-            <div class="modal-step">
-                <span class="modal-step-num">3</span>
-                <p>Нажми <strong>Сохранить</strong> → статус должен стать <span class="status-connected">Подключено</span></p>
-            </div>
-        </div>
-
-        <div class="modal-tips">
-            <h4>💡 Не подключается?</h4>
-            <p>Попробуй альтернативные порты:</p>
-            <ul>
-                <li>Чат: <code>5223</code> / Медиа: <code>8223</code></li>
-                <li>Чат: <code>8081</code> / Медиа: <code>8082</code></li>
-            </ul>
-        </div>
-
-        <button class="modal-done-btn" id="wa-modal-done">Понятно, закрыть</button>
-    </div>
-</div> 
-
-<script>
-    // Модальное окно WhatsApp
-    const waBtn = document.getElementById('wa-proxy-btn');
-    const waModal = document.getElementById('wa-modal');
-    const waClose = document.getElementById('wa-modal-close');
-    const waDone = document.getElementById('wa-modal-done');
-
-    function openModal() {
-        waModal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    }
-
-    function closeModal() {
-        waModal.classList.remove('active');
-        document.body.style.overflow = '';
-    }
-
-    waBtn.addEventListener('click', openModal);
-    waClose.addEventListener('click', closeModal);
-    waDone.addEventListener('click', closeModal);
-    
-    // Закрытие по клику на фон
-    waModal.addEventListener('click', (e) => {
-        if (e.target === waModal) closeModal();
-    });
-    
-    // Закрытие по Escape
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && waModal.classList.contains('active')) {
-            closeModal();
-        }
-    });
-</script>
-    
 </body>
 </html>
